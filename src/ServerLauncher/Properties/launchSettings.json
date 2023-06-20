@@ -3,7 +3,7 @@
     "[Debug] Server": {
       "commandName": "Executable",
       "executablePath": "$(VINTAGE_STORY_CORECLR)\\VintagestoryServer.exe",
-      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).debug\\$(TargetFramework)\" --addModOrigin=\"$(SolutionDir).debug\\$(TargetFramework)\\$(SolutionName)\\assets\"",
+      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).debug\\$(TargetFramework)\"",
       "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
       "nativeDebugging": true
     },
