@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "[Debug] Server": {
+      "commandName": "Executable",
+      "executablePath": "$(VINTAGE_STORY_CORECLR)\\VintagestoryServer.exe",
+      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).debug\\$(TargetFramework)\" --addModOrigin=\"$(SolutionDir).debug\\$(TargetFramework)\\$(SolutionName)\\assets\"",
+      "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
+      "nativeDebugging": true
+    },
+    "[Release] Server": {
+      "commandName": "Executable",
+      "executablePath": "$(VINTAGE_STORY_CORECLR)\\VintagestoryServer.exe",
+      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).releases\\$(TargetFramework)\"",
+      "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
+      "nativeDebugging": true
+    },
+    "[Package] Server": {
+      "commandName": "Executable",
+      "executablePath": "$(VINTAGE_STORY_CORECLR)\\VintagestoryServer.exe",
+      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).releases\\$(TargetFramework)\"",
+      "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
+      "nativeDebugging": true
+    }
+  }
+}
