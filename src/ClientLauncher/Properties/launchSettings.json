@@ -2,23 +2,23 @@
   "profiles": {
     "[Debug] Client": {
       "commandName": "Executable",
-      "executablePath": "$(VINTAGE_STORY_CORECLR)\\Vintagestory.exe",
+      "executablePath": "$(VINTAGE_STORY)\\Vintagestory.exe",
       "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).debug\\$(TargetFramework)\" --addModOrigin=\"$(SolutionDir).debug\\$(TargetFramework)\\$(SolutionName)\\assets\"",
-      "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
+      "workingDirectory": "$(VINTAGE_STORY)",
       "nativeDebugging": true
     },
     "[Release] Client": {
       "commandName": "Executable",
-      "executablePath": "$(VINTAGE_STORY_CORECLR)\\Vintagestory.exe",
+      "executablePath": "$(VINTAGE_STORY)\\Vintagestory.exe",
       "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).releases\\$(TargetFramework)\"",
-      "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
+      "workingDirectory": "$(VINTAGE_STORY)",
       "nativeDebugging": true
     },
     "[Package] Client": {
       "commandName": "Executable",
-      "executablePath": "$(VINTAGE_STORY_CORECLR)\\Vintagestory.exe",
+      "executablePath": "$(VINTAGE_STORY)\\Vintagestory.exe",
       "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).releases\\$(TargetFramework)\"",
-      "workingDirectory": "$(VINTAGE_STORY_CORECLR)",
+      "workingDirectory": "$(VINTAGE_STORY)",
       "nativeDebugging": true
     }
   }
