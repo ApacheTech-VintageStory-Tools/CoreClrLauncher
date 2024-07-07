@@ -1,10 +1,37 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<Version>1.0.0.0</Version>
 		<Configurations>Debug;Release;Package</Configurations>
-		<ActiveDebugProfile>[$(Configuration)] Server</ActiveDebugProfile>
+		<DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Mods\_Released\Knapster\src\Knapster\Knapster.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<UpToDateCheckInput Include="$(MSBuildThisFileDirectory)\Properties\launchSettings.$(Configuration).json" />
+	</ItemGroup>
+
+	<Target Name="ConfigurationChangeDetection" BeforeTargets="Compile">
+
+		<Message Importance="high" Text="Pre-Build Event Fired." />
+
+		<PropertyGroup>
+			<LaunchSettingsFile Condition=" $(Configuration) == 'Debug' ">$(MSBuildThisFileDirectory)\Properties\launchSettings.debug.json</LaunchSettingsFile>
+			<LaunchSettingsFile Condition=" $(Configuration) == 'Release' ">$(MSBuildThisFileDirectory)\Properties\launchSettings.release.json</LaunchSettingsFile>
+			<LaunchSettingsFile Condition=" $(Configuration) == 'Package' ">$(MSBuildThisFileDirectory)\Properties\launchSettings.package.json</LaunchSettingsFile>
+		</PropertyGroup>
+
+		<ItemGroup>
+			<None Include="$(LaunchSettingsFile)">
+				<Link>$(MSBuildThisFileDirectory)\Properties\launchSettings.json</Link>
+			</None>
+		</ItemGroup>
+
+		<Exec Condition="Exists('$(LaunchSettingsFile)')" Command="copy &quot;$(LaunchSettingsFile)&quot; &quot;$(MSBuildThisFileDirectory)\Properties\launchSettings.json&quot;" />
+	</Target>
 
 </Project>

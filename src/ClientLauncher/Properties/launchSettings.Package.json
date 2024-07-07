@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "[Debug]": {
+    "[Package]": {
       "commandName": "Executable",
       "executablePath": "$(VINTAGE_STORY)\\Vintagestory.exe",
-      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).debug\\$(TargetFramework)\" \"$(VINTAGE_STORY_DATA)\\Mods\"",
+      "commandLineArgs": "--tracelog --dataPath=\"$(VINTAGE_STORY_DATA)\" --addModPath=\"$(SolutionDir).releases\\$(TargetFramework)\" \"$(VINTAGE_STORY_DATA)\\Mods\"",
       "workingDirectory": "$(VINTAGE_STORY)",
       "nativeDebugging": true
     }
