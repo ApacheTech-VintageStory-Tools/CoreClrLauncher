@@ -8,10 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Mods\_Released\Knapster\src\Knapster\Knapster.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<UpToDateCheckInput Include="$(MSBuildThisFileDirectory)\Properties\launchSettings.$(Configuration).json" />
 	</ItemGroup>
 
