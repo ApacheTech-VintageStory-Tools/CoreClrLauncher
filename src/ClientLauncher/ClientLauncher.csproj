@@ -5,6 +5,8 @@
 		<Version>1.0.0.0</Version>
 		<Configurations>Debug;Release;Package</Configurations>
 		<DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+		<BuildingProject>True</BuildingProject>
+		<AlwaysRebuild>true</AlwaysRebuild>
 	</PropertyGroup>
 
 	<ItemGroup>
